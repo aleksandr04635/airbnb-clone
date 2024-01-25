@@ -1,0 +1,15 @@
+
+https://www.youtube.com/watch?v=MpQbwtSiZ7E
+https://github.com/dejwid/airbnb-clone
+Build a Fullstack Booking App using MERN (mongo, express, react, node)
+no Redux, user from context
+menu with active link highlighting in AccountNav.jsx
+With photos upload to cloudinary added by ME
+
+how to upload photos to AWS S3, deploying project to vercel,
+https://www.youtube.com/watch?v=WsK7_c6AO_Q
+in every server endpoint add database connection
+ mongoose.connect(process.env.MONGO_URL);
+
+
+
