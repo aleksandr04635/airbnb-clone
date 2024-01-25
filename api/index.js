@@ -176,22 +176,23 @@ app.post("/api/upload-by-link-net", async (req, res) => {
   console.log("link: ", link);
   console.log("newName: ", newName);
   console.log("dest: ", __dirname + "/uploads/" + newName);
-  const file = await imageDownloader.image({
+  //temporary uploading to fs doesn't work on vercel, I just store an original url
+  /*   const file = await imageDownloader.image({
     url: link,
     // dest: "/tmp/" + newName,
     dest: __dirname + "/uploads/" + newName,
   });
   console.log("file: ", file);
   const uploadResult = await cloudinaryUpload(file.filename, newName);
-  console.log("uploadResult: ", uploadResult);
+  console.log("uploadResult: ", uploadResult); */
   /*   const url = await uploadToS3(
     "/tmp/" + newName,
     newName,
     mime.lookup("/tmp/" + newName)
   ); */
   //res.json(newName);//it works too
-  // res.json(link);//it works too
-  res.json(uploadResult.url);
+  res.json(link); //it works too
+  //res.json(uploadResult.url);
   // res.json(url);
 });
 
