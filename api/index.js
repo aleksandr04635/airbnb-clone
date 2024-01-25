@@ -191,8 +191,10 @@ app.post("/api/upload-by-link-net", async (req, res) => {
     mime.lookup("/tmp/" + newName)
   ); */
   //res.json(newName);//it works too
-  res.json(link); //it works too
-  //res.json(uploadResult.url);
+  const uploadResult = await cloudinaryUpload(link, newName);
+  console.log("uploadResult: ", uploadResult);
+  //res.json(link); //it works too
+  res.json(uploadResult.url);
   // res.json(url);
 });
 
